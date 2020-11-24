@@ -245,18 +245,9 @@ html {
 	-ms-transition: all 0.4s ease 0s;
 	-o-transition: all 0.4s ease 0s;
 }
-.disabled {
-	opacity: 0;
-	pointer-events: none;
-	display: none;
-	transition: all 0.4s ease 0s;
-	-webkit-transition: all 0.4s ease 0s;
-	-moz-transition: all 0.4s ease 0s;
-	-ms-transition: all 0.4s ease 0s;
-	-o-transition: all 0.4s ease 0s;
-}
+
 .main-screen {
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	padding: 52px 62px;
 	display: flex;
@@ -387,7 +378,7 @@ html, body {
 .folio-section {
 	width: 100%;
 }
-.folio-filter {
+.folio-content {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -397,7 +388,7 @@ html, body {
 	padding: 40px 0;
 }
 
-.folio-filter__item {
+.folio-content__item {
 	flex-grow: 1;
 	display: block;
 	margin: 0 15px 30px;
@@ -409,16 +400,16 @@ html, body {
 	perspective: 1000px;
 }
 
-.folio-filter__item:hover .folio-filter__back {
+.folio-content__item:hover .folio-content__back {
 	transform: rotateY(360deg);
 }
 
-.folio-filter__item:hover .folio-filter__front {
+.folio-content__item:hover .folio-content__front {
 	transform: rotateY(180deg);
 }
 
-.folio-filter__front,
-.folio-filter__back {
+.folio-content__front,
+.folio-content__back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -431,11 +422,11 @@ html, body {
 	backface-visibility: hidden;
 }
 
-.folio-filter__front {
+.folio-content__front {
 	background: no-repeat center/cover;
 }
 
-.folio-filter__back {
+.folio-content__back {
 	padding: 20px 0 0;
 	color: #000;
 	display: flex;
@@ -445,25 +436,25 @@ html, body {
 	transform: rotateY(180deg);
 }
 
-.folio-filter__caption{
+.folio-content__caption{
 	font-size: 1.8rem;
 	line-height: 1.2;
 	padding: 0 20px;
 	text-align: center;
 }
 
-.folio-filter__list {
+.folio-content__list {
 	align-self: flex-start;
 	padding: 0 20px;
 }
-.folio-filter__list-row {
+.folio-content__list-row {
 	font-size: 1.2rem;
 }
-.folio-filter__list-row--key {
+.folio-content__list-row--key {
 	font-size: 1.4rem;
 }
 
-.folio-filter__link{
+.folio-content__link{
 	max-width: 100%;
 	width: 100%;
 }
@@ -481,7 +472,7 @@ html, body {
 }
 
 @media (max-width: 767px){
-	.folio-filter {
+	.folio-content {
 		padding: 20px 0;
 	}
 	.main-screen{
